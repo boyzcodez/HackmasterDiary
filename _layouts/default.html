@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title | default: site.title }} | {{ site.title }}</title>
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+  <nav class="site-nav">
+    <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active"{% endif %}>Home</a>
+    {% for n in (1..8) %}
+    {% assign hwurl = '/h' | append: n | append: '/' %}
+    <a href="{{ hwurl | relative_url }}"{% if page.url == hwurl %} class="active"{% endif %}>H{{ n }}</a>
+    {% endfor %}
+  </nav>
+</header>
+
+<main>
+  {% unless page.url == '/' %}<h1>{{ page.title }}</h1>{% endunless %}
+  {{ content }}
+</main>
+
+<footer class="site-footer">
+  <p>{{ site.description }}</p>
+</footer>
+</body>
+</html>

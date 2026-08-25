@@ -1,0 +1,14 @@
+title: Ethical Hacking Diary
+description: Coursework diary and homework write-ups
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - README.md
