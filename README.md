@@ -35,7 +35,7 @@ Markdown supports code blocks, bullet lists, tables, blockquotes, bold/italic, a
 ## Adding pictures
 
 1. Drop the image file into `assets/img/hN/` (make the folder if it's the first image for that homework).
-2. Reference it in the Markdown with `![alt text](/assets/img/hN/filename.png)`.
+2. Reference it in the Markdown with `![alt text]({{ '/assets/img/hN/filename.png' | relative_url }})` — the `relative_url` filter matters because this site is hosted at `/HackmasterDiary/`, not the domain root, so a plain `/assets/...` path will 404.
 
 Keep filenames simple (no spaces) and images reasonably sized so pages load fast.
 

@@ -1,5 +1,6 @@
 title: HackmasterDiary
 description: Coursework diary and homework write-ups
+baseurl: "/HackmasterDiary"
 markdown: kramdown
 kramdown:
   input: GFM
